@@ -1,7 +1,7 @@
 {
-	"name": "multer-gridfs-storage",
-	"version": "5.0.2",
-	"description": "Multer storage engine for GridFS",
+	"name": "multer-gridfs-storage-angler",
+	"version": "1.0.0",
+	"description": "Multer storage engine for GridFS adjusted to be compatible with eAssist angler app",
 	"main": "lib/index.js",
 	"scripts": {
 		"compile": "del-cli ./lib/** && tsc --declaration",
