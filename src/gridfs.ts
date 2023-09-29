@@ -348,17 +348,9 @@ export class GridFsStorage extends EventEmitter implements StorageEngine {
 				reject(streamError);
 			};
 
-			const emitFile = (f) => {
-				const storedFile: GridFile = {
-					id: f._id,
-					filename: f.filename,
-					metadata: f.metadata || null,
+			const emitFile = () => {
+				const storedFile: any = {
 					bucketName: streamOptions.bucketName,
-					chunkSize: f.chunkSize,
-					size: f.length,
-					md5: f.md5,
-					uploadDate: f.uploadDate,
-					contentType: f.contentType,
 				};
 				this.emit('file', storedFile);
 				resolve(storedFile);
